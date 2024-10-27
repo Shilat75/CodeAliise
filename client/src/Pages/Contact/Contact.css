@@ -1,0 +1,105 @@
+.contact-page {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .intro-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .overlay {
+    background: transparent;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .intro-section h1 {
+    color: #ecf0f1;
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  
+  .intro-section p {
+    color: #bdc3c7;
+    font-size: 1.5rem;
+  }
+  
+  .contact-form-section {
+    padding: 50px 20px;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-wrapper {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 1.2rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+  }
+  
+  .cta-button {
+    background-color: #2980b9;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05);
+  }
+  
+  .cta-section {
+    padding: 50px 20px;
+    background-color: #3498db;
+    text-align: center;
+    color: white;
+  }
+  

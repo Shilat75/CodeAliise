@@ -1,0 +1,11 @@
+pymongo==4.8.0
+numpy==1.26.4
+scikit-learn==1.2.2
+langchain==0.2.12
+groq==0.5.0
+tqdm==4.66.1
+fastapi==0.112.0
+uvicorn==0.30.5
+pydantic==2.8.2
+bson
+langchain_community

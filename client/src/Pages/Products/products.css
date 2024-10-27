@@ -1,0 +1,131 @@
+.products-page {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;  color: #2c3e50;
+    color: #2c3e50;
+    line-height: 1.6;
+    position: relative;
+}
+
+.hero-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-section .overlay {
+    background: transparent; /* Semi-transparent purple overlay */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-section h1 {
+    color: #ecf0f1;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    color: #bdc3c7;
+    font-size: 1.5rem;
+}
+
+.features-section {
+    padding: 50px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.features-wrapper h2 {
+    color: #2980b9;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-text {
+    font-size: 1.5rem;
+    color: #34495e;
+    transition: opacity 1s ease-in-out;
+}
+
+.product-list {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.product-item {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item h3 {
+    font-size: 1.8rem;
+    color: #3498db;
+}
+
+.testimonials-section {
+    padding: 50px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #34495e;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 10px;
+    color: #3498db;
+}
+
+.cta-section {
+    padding: 50px 20px;
+    background-color: #3498db;
+    text-align: center;
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #2980b9;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1abc9c;
+}

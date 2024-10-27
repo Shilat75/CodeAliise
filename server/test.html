@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT API Test</title>
+</head>
+<body>
+    <h1>ChatGPT API Test</h1>
+    <button onclick="testAPI()">Test API</button>
+    <pre id="output"></pre>
+
+    <script>
+        async function testAPI() {
+            const questionId = "60c72b2f9b1e8a3f7c8f9b3b"; // שים פה את ה-ID של השאלה שאתה רוצה לבדוק
+            const outputElement = document.getElementById('output');
+            outputElement.textContent = "Loading...";
+
+            try {
+                const response = await fetch('/api/chatgpt', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ questionId })
+                });
+                const data = await response.json();
+                outputElement.textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                console.error('Error fetching answer from ChatGPT:', error);
+                outputElement.textContent = 'Error fetching answer from ChatGPT: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO Chat App</title>
+  </head>
+  <body>
+    <h1>Socket.IO Chat App</h1>
+    <div id="messages"></div>
+    <form id="message-form">
+      <input
+        type="text"
+        name="message"
+        placeholder="Message"
+        autocomplete="off"
+      />
+      <button>Send</button>
+    </form>
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script type="module">
+      const socket = io();
+      const messageForm = document.querySelector("#message-form");
+      const messageInput = messageForm.querySelector("input");
+      const messagesDiv = document.querySelector("#messages");
+
+      messageForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const message = messageInput.value.trim();
+        if (message) {
+          socket.emit("sendMessage", message, () => {
+            messageInput.value = "";
+            messageInput.focus();
+          });
+        }
+      });
+
+      socket.on("message", (message) => {
+        const messageElement = document.createElement("div");
+        messageElement.textContent = message;
+        messagesDiv.appendChild(messageElement);
+      });
+    </script>
+  </body>
+</html>

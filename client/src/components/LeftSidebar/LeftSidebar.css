@@ -1,0 +1,98 @@
+:root {
+  --primary-color: #4A90E2;
+  --secondary-color: #50E3C2;
+  --background-color: #F7F9FC;
+  --text-color: #333333;
+  --border-color: #E1E4E8;
+  --widget-bg: #FFFFFF;
+  --widget-header-bg: linear-gradient(45deg, #4A90E2, #50E3C2);
+  --widget-header-color: #FFFFFF;
+  --tag-bg: #E1F5FE;
+  --tag-border: #B0BEC5;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --sidebar-bg: #FAF6F2;
+  --sidebar-link-color: #4A90E2;
+  --sidebar-link-hover-color: #4A90E2;
+  --sidebar-active-bg: #E1F5FE;
+}
+
+.left-sidebar {
+  display: flex; /* Fixes the sidebar position on the screen */
+  left: 10px; /* Leaves a 10px space from the left edge of the screen */
+  top: 0; /* Aligns the sidebar to the top of the screen */
+  width: 264px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  background: rgba(255, 255, 255, 0.8);
+  height: 100vh; /* Ensures the sidebar takes the full height of the viewport */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 20px;
+  border: solid 1px;
+}
+
+
+
+
+.nav-btn {
+  background-color: inherit;
+  width: 100%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.side-nav {
+  height: auto;
+  max-width: 100%;
+  position: sticky;
+  margin: 50px 0;
+  padding: 20px 0;
+}
+
+.side-nav-div {
+  padding: 15px 0;
+}
+
+.side-nav-div div {
+  padding-left: 10px;
+}
+
+.side-nav-links {
+  text-decoration: none;
+  color: var(--sidebar-link-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 10px;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.side-nav-links:hover {
+  color: var(--sidebar-link-hover-color);
+  background-color: var(--sidebar-active-bg);
+  transform: translateX(5px);
+}
+
+.active {
+  font-weight: bolder;
+  color: var(--sidebar-link-hover-color);
+  background-color: var(--sidebar-active-bg);
+  border-right: 4px solid var(--sidebar-link-hover-color);
+}
+
+@media screen and (max-width: 760px) {
+  .left-sidebar {
+    position: absolute;
+    transform: translateX(-100%);
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .left-sidebar.active {
+    transform: translateX(0);
+  }
+}

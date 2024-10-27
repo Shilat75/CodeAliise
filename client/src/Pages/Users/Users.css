@@ -1,0 +1,46 @@
+.user-list-container {
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Slightly larger columns */
+  gap: 20px; /* Reduced gap for a more compact look */
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec); /* Add a soft gradient background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.user-profile-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Box shadow for a floating effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.user-profile-link:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.user-profile-link h3 {
+  padding: 15px;
+  background-color: #4A90E2; /* Use the primary color */
+  color: white;
+  border-radius: 50%;
+  font-size: 24px; /* Increase the size for better visibility */
+}
+
+.user-profile-link h5 {
+  margin-left: 15px;
+  font-weight: 600; /* Slightly bolder text */
+  color: #333; /* Darker text color for better contrast */
+}
+
+.user-profile-link:hover h3 {
+  background-color: #50E3C2; /* Change to secondary color on hover */
+  transform: rotate(360deg); /* Add a spinning effect */
+  transition: transform 0.5s ease; /* Smooth spinning animation */
+}
