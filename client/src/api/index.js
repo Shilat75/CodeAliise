@@ -6,7 +6,7 @@ const API = axios.create({
 });
 
 const FAQ_Api = axios.create({
-  baseURL: "http://127.0.0.1:8200"
+  baseURL: "http://127.0.0.1:8000"
 });
 
 API.interceptors.request.use((req) => {

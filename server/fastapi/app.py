@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pymongo import MongoClient
 import numpy as np
+import torch
 from sklearn.metrics.pairwise import cosine_similarity
 from bson import ObjectId
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
@@ -10,6 +11,9 @@ from groq import Groq
 import re
 from tqdm import tqdm
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
+load_dotenv("../.env")
+
 
 app = FastAPI()
 
@@ -62,9 +66,9 @@ def cluster_questions(embeddings, threshold=0.9):
     return clusters
 
 def get_keywords(question, body):
-    os.environ["GROQ_API_KEY"] = "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"
+ 
     client = Groq(
-        api_key=os.environ.get("GROQ_API_KEY"),
+        api_key=os.getenv("GROQ_API_KEY"),
     )
     Output_Format = '''
     Generated output format
